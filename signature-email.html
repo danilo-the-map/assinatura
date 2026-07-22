@@ -8,17 +8,22 @@
   colar código HTML e ignora <map>/usemap. Use o arquivo "signature-full.png"
   com "Inserir imagem > Fazer upload" — passo a passo no README.md.
 
+  ATENÇÃO — HOSPEDAGEM DAS IMAGENS:
+  Hoje o repositório danilo-the-map/assinatura é PRIVADO, então estas URLs do
+  jsDelivr NÃO funcionam (jsDelivr e clientes de e-mail não carregam imagem de
+  repo privado). Para este HTML funcionar no n8n, escolha uma opção:
+    a) tornar o repositório PÚBLICO e fazer merge dos arquivos na branch main; ou
+    b) hospedar signature-left.png e signature-video.gif em outro lugar público
+       (Vercel, o próprio domínio themap.ag, etc.) e trocar as URLs abaixo.
+
   PARA USAR ESTE HTML (n8n / clientes que aceitam HTML):
-  1) O repositório danilo-the-map/assinatura precisa estar PÚBLICO e os PNGs
-     precisam estar na branch main (o jsDelivr e imagens de e-mail não carregam
-     de repositório privado).
+  1) Garanta as imagens num endereço público (ver acima).
   2) Cole todo o bloco <table>...</table> abaixo no corpo/assinatura.
-  3) As imagens são servidas por:
-     https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/ARQUIVO
+  3) Troque a URL base pelas suas, se não usar o jsDelivr.
 
   Layout: dois blocos lado a lado.
-    - esquerda (info)  -> link para o WhatsApp
-    - direita (verde)  -> link para themap.ag
+    - esquerda (info)         -> link para o WhatsApp
+    - direita (verde animado) -> link para themap.ag
   ============================================================================
 -->
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#eeeeee;border-radius:42px;">
@@ -34,7 +39,7 @@
     <td style="padding:0;font-size:0;line-height:0;" valign="top">
       <a href="https://themap.ag" target="_blank" style="text-decoration:none;">
         <img
-          src="https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/signature-right-green.png"
+          src="https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/signature-video.gif"
           width="293" height="294" alt="the map — strategy studio"
           style="display:block;border:0;border-radius:0 42px 42px 0;width:293px;height:294px;background:#4d613c;" />
       </a>

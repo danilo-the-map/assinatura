@@ -8,7 +8,8 @@ Arquivos para montar a assinatura de e-mail da the map.
 |---|---|
 | `signature-full.png` | **Card completo** (painel + quadrado verde), 800×294 em @2x. É o arquivo para o Gmail. |
 | `signature-left.png` | Só o painel de informação (507×294 @2x). Para a versão HTML de 2 blocos. |
-| `signature-right-green.png` | Só o quadrado verde (293×294 @2x). Para a versão HTML de 2 blocos. |
+| `signature-video.gif` | **Bloco verde animado** (293×294, ~900 KB): o vídeo em duotone verde. Para a versão HTML. |
+| `signature-right-green.png` | Bloco verde estático (293×294 @2x). Alternativa sem animação. |
 | `signature-email.html` | Versão em HTML (n8n / clientes que aceitam HTML). **Não serve para o Gmail.** |
 | `signature-email-preview.html` | Abre no navegador para conferir o resultado localmente. |
 | `assinatura the map.fig` | Arquivo-fonte do Figma. |
@@ -58,24 +59,33 @@ Pronto — mande um e-mail de teste para você mesmo para conferir.
 Só use se for enviar por **n8n** ou outro cliente que aceite HTML de verdade
 (o Gmail não aceita — veja acima).
 
-1. Deixe o repositório `danilo-the-map/assinatura` **público** e os PNGs na
-   branch `main` (imagens de e-mail e o jsDelivr não carregam de repo privado).
+> ⚠️ **As imagens precisam estar num endereço público.** Hoje o repositório
+> `danilo-the-map/assinatura` é **privado**, então as URLs do jsDelivr no HTML
+> **não funcionam** (jsDelivr e clientes de e-mail não carregam imagem de repo
+> privado). Escolha uma opção antes de usar:
+> - **a)** tornar o repositório público e dar merge dos arquivos na `main`; ou
+> - **b)** hospedar `signature-left.png` e `signature-video.gif` em outro lugar
+>   público (Vercel, o domínio `themap.ag`, etc.) e trocar a URL base no HTML.
+
+1. Garanta as imagens num endereço público (ver aviso acima).
 2. Copie todo o bloco `<table>…</table>` do arquivo `signature-email.html`.
-3. As imagens são servidas por
+3. Se usar o jsDelivr com o repo público:
    `https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/...`.
 
-Nessa versão: clicar no **painel** leva ao WhatsApp e clicar no **quadrado
-verde** leva a `themap.ag`.
+Nessa versão: clicar no **painel** leva ao WhatsApp e clicar no **bloco verde
+animado** leva a `themap.ag`.
 
 ---
 
 ## Notas técnicas
 
-- O `signature-video.gif` que estava no repositório era um export quebrado
-  (100 quadros praticamente pretos, em escala de cinza) — não era o quadrado
-  verde da marca. Por isso não foi usado. O lado direito agora é o quadrado
-  verde sólido do design do Figma. Se você tiver o vídeo original (.mp4), dá
-  para gerar um GIF animado correto e trocar.
+- O `signature-video.gif` foi refeito a partir do vídeo original (.mp4): o plano
+  P&B do homem lendo o mapa recebeu um tratamento **duotone verde** (fundo →
+  `rgb(77,97,60)` da marca, figura/sombra → verde escuro), recorte no formato do
+  bloco, 9 fps e paleta reduzida (~900 KB) para rodar bem em e-mail. O GIF antigo
+  era um export quebrado (quadros pretos em escala de cinza) e foi substituído.
+- Existe também `signature-right-green.png` (bloco verde estático) caso queira
+  uma versão sem animação.
 - As imagens foram renderizadas a partir do design do Figma em **@2x** (o dobro
   da resolução) para ficarem nítidas em telas retina. A fonte é **Hubot Sans**.
 - O ícone de localização ao lado de "strategy studio" foi recriado. Se houver um
