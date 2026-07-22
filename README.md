@@ -59,18 +59,16 @@ Pronto — mande um e-mail de teste para você mesmo para conferir.
 Só use se for enviar por **n8n** ou outro cliente que aceite HTML de verdade
 (o Gmail não aceita — veja acima).
 
-> ⚠️ **As imagens precisam estar num endereço público.** Hoje o repositório
-> `danilo-the-map/assinatura` é **privado**, então as URLs do jsDelivr no HTML
-> **não funcionam** (jsDelivr e clientes de e-mail não carregam imagem de repo
-> privado). Escolha uma opção antes de usar:
-> - **a)** tornar o repositório público e dar merge dos arquivos na `main`; ou
-> - **b)** hospedar `signature-left.png` e `signature-video.gif` em outro lugar
->   público (Vercel, o domínio `themap.ag`, etc.) e trocar a URL base no HTML.
+O repositório é **público**, então as imagens já são servidas pelo jsDelivr.
+É só copiar o bloco `<table>…</table>` do `signature-email.html` e colar no HTML
+da assinatura do n8n — as URLs já apontam para um endereço público.
 
-1. Garanta as imagens num endereço público (ver aviso acima).
-2. Copie todo o bloco `<table>…</table>` do arquivo `signature-email.html`.
-3. Se usar o jsDelivr com o repo público:
-   `https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/...`.
+As URLs estão **fixadas no commit** (imutáveis), então funcionam mesmo antes de
+dar merge na `main`:
+`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@f629e44…/signature-left.png`
+`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@f629e44…/signature-video.gif`
+
+(Opcional: depois do merge na `main`, dá para trocar `@f629e44…` por `@main`.)
 
 Nessa versão: clicar no **painel** leva ao WhatsApp e clicar no **bloco verde
 animado** leva a `themap.ag`.
