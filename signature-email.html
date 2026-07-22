@@ -1,41 +1,41 @@
 <!--
   ============================================================================
-  ASSINATURA THE MAP — Danilo Colombo  (HTML para e-mail / n8n)
+  ASSINATURA THE MAP — Danilo Colombo
+  Versão HTML para clientes de e-mail que aceitam HTML (n8n, Apple Mail, etc.)
   ============================================================================
-  COMO USAR:
-  1) Faca push destes arquivos na RAIZ do repo danilo-the-map/the-map (branch main):
-       signature-left.png          (lado esquerdo, estatico)
-       signature-video.gif         (quadrado verde, animado)  <-- gerado do seu .mp4
-       signature-right-green.png   (fallback verde, opcional)
-  2) IMPORTANTE: o repo precisa ser PUBLICO. O jsDelivr (e imagens em e-mail)
-     nao carregam arquivos de repo privado. Torne o repo publico OU crie um
-     repo publico so para estes assets.
-  3) Cole todo o bloco <table>...</table> abaixo no corpo/assinatura do n8n.
-     URLs ja apontam para: https://cdn.jsdelivr.net/gh/danilo-the-map/the-map@main/ARQUIVO
 
-  OBS Gmail: <video> nao toca; por isso o quadrado usa GIF animado.
+  PARA O GMAIL: não use este HTML. O editor de assinatura do Gmail NÃO aceita
+  colar código HTML e ignora <map>/usemap. Use o arquivo "signature-full.png"
+  com "Inserir imagem > Fazer upload" — passo a passo no README.md.
+
+  PARA USAR ESTE HTML (n8n / clientes que aceitam HTML):
+  1) O repositório danilo-the-map/assinatura precisa estar PÚBLICO e os PNGs
+     precisam estar na branch main (o jsDelivr e imagens de e-mail não carregam
+     de repositório privado).
+  2) Cole todo o bloco <table>...</table> abaixo no corpo/assinatura.
+  3) As imagens são servidas por:
+     https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/ARQUIVO
+
+  Layout: dois blocos lado a lado.
+    - esquerda (info)  -> link para o WhatsApp
+    - direita (verde)  -> link para themap.ag
   ============================================================================
 -->
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#eeeeee;border-radius:42px;">
   <tr>
     <td style="padding:0;font-size:0;line-height:0;" valign="top">
-      <a href="https://themap.ag" target="_blank" style="text-decoration:none;">
+      <a href="https://wa.me/5511983261097" target="_blank" style="text-decoration:none;">
         <img
-          src="https://cdn.jsdelivr.net/gh/danilo-the-map/the-map@main/signature-left.png"
-          width="507" height="294" alt="danilo colombo — founder e CGO — the map"
-          usemap="#assinatura-map"
+          src="https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/signature-left.png"
+          width="507" height="294" alt="danilo colombo — founder e CGO — the map — WhatsApp +55 11 98326-1097"
           style="display:block;border:0;border-radius:42px 0 0 42px;width:507px;height:294px;" />
       </a>
-      <map name="assinatura-map">
-        <area shape="rect" coords="50,181,268,225" href="https://wa.me/5511983261097" target="_blank" alt="WhatsApp +55 11 98326-1097" title="Falar no WhatsApp" />
-        <area shape="rect" coords="0,0,507,294" href="https://themap.ag" target="_blank" alt="the map" title="the map" />
-      </map>
     </td>
     <td style="padding:0;font-size:0;line-height:0;" valign="top">
       <a href="https://themap.ag" target="_blank" style="text-decoration:none;">
         <img
-          src="https://cdn.jsdelivr.net/gh/danilo-the-map/the-map@main/signature-video.gif"
-          width="293" height="294" alt="the map — 3-step methodology"
+          src="https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@main/signature-right-green.png"
+          width="293" height="294" alt="the map — strategy studio"
           style="display:block;border:0;border-radius:0 42px 42px 0;width:293px;height:294px;background:#4d613c;" />
       </a>
     </td>
