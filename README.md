@@ -8,7 +8,7 @@ Arquivos para montar a assinatura de e-mail da the map.
 |---|---|
 | `signature-full.png` | **Card completo** (painel + quadrado verde), 800×294 em @2x. É o arquivo para o Gmail. |
 | `signature-left.png` | Só o painel de informação (507×294 @2x). Para a versão HTML de 2 blocos. |
-| `signature-video.gif` | **Bloco verde animado** (293×294, ~900 KB): o vídeo em duotone verde. Para a versão HTML. |
+| `signature-video.gif` | **Bloco animado** (293×294, ~1,1 MB): o vídeo oficial da marca — homem lendo o mapa (P&B) fechando no logo "the map." em verde. Para a versão HTML. |
 | `signature-right-green.png` | Bloco verde estático (293×294 @2x). Alternativa sem animação. |
 | `signature-email.html` | Versão em HTML (n8n / clientes que aceitam HTML). **Não serve para o Gmail.** |
 | `signature-email-preview.html` | Abre no navegador para conferir o resultado localmente. |
@@ -65,10 +65,10 @@ da assinatura do n8n — as URLs já apontam para um endereço público.
 
 As URLs estão **fixadas no commit** (imutáveis), então funcionam mesmo antes de
 dar merge na `main`:
-`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@adf53be…/signature-left.png`
-`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@adf53be…/signature-video.gif`
+`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@9c0c020…/signature-left.png`
+`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@9c0c020…/signature-video.gif`
 
-(Opcional: depois do merge na `main`, dá para trocar `@adf53be…` por `@main`.)
+(Opcional: depois do merge na `main`, dá para trocar `@9c0c020…` por `@main`.)
 
 Nessa versão: clicar no **painel** leva ao WhatsApp e clicar no **bloco verde
 animado** leva a `themap.ag`.
@@ -77,11 +77,10 @@ animado** leva a `themap.ag`.
 
 ## Notas técnicas
 
-- O `signature-video.gif` foi refeito a partir do vídeo original (.mp4): o plano
-  P&B do homem lendo o mapa recebeu um tratamento **duotone verde** (fundo →
-  `rgb(77,97,60)` da marca, figura/sombra → verde escuro), recorte no formato do
-  bloco, 9 fps e paleta reduzida (~900 KB) para rodar bem em e-mail. O GIF antigo
-  era um export quebrado (quadros pretos em escala de cinza) e foi substituído.
+- O `signature-video.gif` é o **vídeo oficial da marca** (1000×1000, quadrado —
+  encaixa no bloco sem cortar as laterais): homem lendo o mapa em P&B dentro da
+  moldura verde, fechando no logo "the map." em verde. Convertido a 9 fps com
+  paleta reduzida (~1,1 MB) para rodar bem em e-mail, mantendo a duração total.
 - Existe também `signature-right-green.png` (bloco verde estático) caso queira
   uma versão sem animação.
 - As imagens foram renderizadas a partir do design do Figma em **@2x** (o dobro
