@@ -65,10 +65,10 @@ da assinatura do n8n — as URLs já apontam para um endereço público.
 
 As URLs estão **fixadas no commit** (imutáveis), então funcionam mesmo antes de
 dar merge na `main`:
-`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@f629e44…/signature-left.png`
-`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@f629e44…/signature-video.gif`
+`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@adf53be…/signature-left.png`
+`https://cdn.jsdelivr.net/gh/danilo-the-map/assinatura@adf53be…/signature-video.gif`
 
-(Opcional: depois do merge na `main`, dá para trocar `@f629e44…` por `@main`.)
+(Opcional: depois do merge na `main`, dá para trocar `@adf53be…` por `@main`.)
 
 Nessa versão: clicar no **painel** leva ao WhatsApp e clicar no **bloco verde
 animado** leva a `themap.ag`.
@@ -85,6 +85,11 @@ animado** leva a `themap.ag`.
 - Existe também `signature-right-green.png` (bloco verde estático) caso queira
   uma versão sem animação.
 - As imagens foram renderizadas a partir do design do Figma em **@2x** (o dobro
-  da resolução) para ficarem nítidas em telas retina. A fonte é **Hubot Sans**.
-- O ícone de localização ao lado de "strategy studio" foi recriado. Se houver um
-  logo/ícone oficial da the map, me envie que eu troco pelo original.
+  da resolução) para ficarem nítidas em telas retina.
+- A fonte **Hubot Sans** está **embutida no HTML de renderização em base64** —
+  não depende de CDN. (Antes o texto caía no fallback Arial porque o CDN da
+  fonte era bloqueado na hora de gerar a imagem.)
+- Elementos conferidos contra o thumbnail do próprio `.fig` para bater com o
+  Figma: ícone do WhatsApp dentro da pílula (asset extraído do `.fig`), ícone
+  "union" (círculo + linha horizontal) e "strategy studio / map method // 2026"
+  centralizado verticalmente nesse ícone.
